@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDICINE</title>
+    <link rel="icon" type="image/x-icon" href="c:\Users\Hongs\OneDrive\바탕 화면\파비콘 약.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        header {
+            position: relative;
+            height: 60vh;
+        }
+
+        .main-visual {
+            display: table;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+
+        .main-visual img {
+            max-width: 100%;
+            max-height: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            margin: auto;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            text-align: center;
+            display: table;
+        }
+
+        .overlay div {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 1.2em;
+            letter-spacing: 0.2em;
+        }
+
+        nav ul li a:hover {
+            color: #000000;
+        }
+
+        section {
+            padding: 20px 0;
+        }
+
+        section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        .drug-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .drug-type {
+            width: 100%;
+            padding-top: 100%;
+            position: relative;
+            border: 1px solid #cccccc;
+            text-align: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background: #f0f0f0;
+            box-sizing: border-box;
+        }
+
+        .drug-type img {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: auto;
+            z-index: 1;
+        }
+
+        .drug-type a {
+            color: #333333;
+            text-decoration: none;
+            font-size: 1.2em;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+        }
+
+        .drug-type:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+        }
+
+        .drug-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            text-decoration: none;
+        }
+
+
+        footer {
+            background: #333333;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        .center-text {
+            text-align: center;
+        }
+
+        .text-with-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 80px;
+        }
+
+        .text-with-image img {
+            margin-left: 20px;
+            max-width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main-visual">
+            <img src="https://cdn.pixabay.com/photo/2018/05/30/22/54/tablets-3442768_1280.jpg" alt="약 이미지">
+            <div class="overlay">
+                <div>
+                    <h1 style="font-size:300%">MEDICINE</h1>
+                    <nav>
+                        <ul>
+                            <li><a href="#about">소개</a></li>
+                            <li><a href="#types">약 종류</a></li>
+                            <li><a href="#contact">연락처</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <br><br><br>
+            <h2>소개</h2>
+            <h4 class="center-text">&lt;사이트 제작 이유&gt;</h4>
+            <div class="text-with-image">
+                <img src="c:\Users\Hongs\OneDrive\바탕 화면\약사.jpg" alt="약사 이미지">
+                <div>
+                    <p>이 사이트는 건강과 관련된 정보를 제공하며, 특히 다양한 약 종류에 대한 상세한 설명을 제공합니다.<br> 개발자는 어렸을 적(~초등학생) 시절 맞벌이 부모님 아래에서 자랐습니다. 그 덕에 집에서 혼자 아파 끙끙댈 때가 많았죠. 또한 20살이 되어 첫 자취를 시작했을 때도 감기, 독감, 장염, 위 쓰림 등 여기저기 아파 혼자 고생했던 적이 많았습니다. 항상 아플 때마다 부모님께 연락드려 여쭈거나 인터넷을 뒤지는 것은 번거롭거니와 다급한 상황에서 대처하기 매우 힘들었습니다. 그래서 본 개발자는 첫 자취 시 필요한 상비약들과 집에서 간단히 치료할 수 있는 질병(이하 약으로 치료 가능한 질병)에 대처하기 위한 약들을 소개하고, 정리하고자 하였습니다. <br>물론 본 사이트는 그저 참고용이니, 확실한 진단을 원하실 경우엔 병원에 방문하시는 것을 권고 드립니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="types">
+        <div class="container">
+            <h2>약 종류</h2>
+            <div class="drug-grid">
+                <div class="drug-type">
+                    <a class="drug-link" href="painkillers.html"></a>
+                    <img src="c:\Users\Hongs\OneDrive\바탕 화면\통증.jpg" alt="진통제 이미지">
+                    <a href="painkillers.html">진통제</a>
+                </div>
+                <div class="drug-type">
+                    <a class="drug-link" href="skincare.html"></a>
+                    <img src="c:\Users\Hongs\OneDrive\바탕 화면\피부병.jpg" alt="피부약 이미지">
+                    <a href="skincare.html">피부약</a>
+                </div>
+                <div class="drug-type">
+                    <a class="drug-link" href="coldmeds.html"></a>
+                    <img src="c:\Users\Hongs\OneDrive\바탕 화면\감기.jpg" alt="감기약 이미지">
+                    <a href="coldmeds.html">감기약</a>
+                </div>
+                <div class="drug-type">
+                    <a class="drug-link" href="firstaid.html"></a>
+                    <img src="c:\Users\Hongs\OneDrive\바탕 화면\상비약.jpg" alt="상비약 이미지">
+                    <a href="firstaid.html">상비약</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="contact">
+        <div class="container">
+            <h3>연락처 및 출처</h3>
+            <p>문의사항이 있으시면 아래 연락처로 연락해 주세요.</p>
+            <ul>
+                <li>이메일: 개인정보</li>
+                <li>전화: 개인정보</li>
+            </ul>
+        </div>
+    </section>
+    <hr>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 약 종류 소개 사이트. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
